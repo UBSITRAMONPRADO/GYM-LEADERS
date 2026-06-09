@@ -1,0 +1,86 @@
+.home-container {
+    padding: 40px 24px;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 48px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+  
+  .hero p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1px;
+  }
+  
+  .region-cards {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .region-card {
+    flex: 1;
+    min-width: 280px;
+    background: #130d0d;
+    border-radius: 8px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s ease;
+  }
+  
+  .region-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .region-card.kanto {
+    border-top: 3px solid #cd9b6a;
+  }
+  
+  .region-card.johto {
+    border-top: 3px solid #40d8a0;
+  }
+  
+  .region-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .kanto h2 {
+    color: #cd9b6a;
+  }
+  
+  .johto h2 {
+    color: #40d8a0;
+  }
+  
+  .region-card p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.7;
+    margin: 0;
+  }
+  
+  .badge-count {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    margin-top: 8px;
+  }

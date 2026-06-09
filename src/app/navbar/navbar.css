@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #1a0a0a;
+    border-bottom: 1px solid #333;
+  }
+  
+  .nav-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .nav-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }

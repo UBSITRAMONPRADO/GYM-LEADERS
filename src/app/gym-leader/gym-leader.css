@@ -1,0 +1,190 @@
+.leader-card {
+  background: #130d0d;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.leader-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-info { flex: 1; }
+
+.leader-name {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  margin: 0 0 2px 0;
+  letter-spacing: 0.5px;
+}
+
+.badge-label {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.badge-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.badge-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta-item {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.age-tag {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+
+.arrow { font-size: 12px; }
+
+.pokemon-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-label {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Courier New', monospace;
+  margin: 0;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pokemon-chip {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.poke-name {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+}
+
+.poke-level {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'Courier New', monospace;
+}
+
+/* ── Tab Buttons ── */
+.tab-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 700;
+}
+
+/* ── Info Panel ── */
+.info-panel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.info-tab-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+}
+
+.info-text {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: 'Courier New', monospace;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
