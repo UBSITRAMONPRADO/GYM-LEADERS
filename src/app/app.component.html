@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="nav-brand">
+    <span class="nav-logo">⚔</span>
+    <span class="nav-title">Gym Leaders</span>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+    </li>
+    <li>
+      <a routerLink="/kanto" routerLinkActive="active" class="kanto">Kanto</a>
+    </li>
+    <li>
+      <a routerLink="/johto" routerLinkActive="active" class="johto">Johto</a>
+    </li>
+    <li>
+      <a routerLink="/hoenn" routerLinkActive="active" class="hoenn">Hoenn</a>
+    </li>
+  </ul>
+</nav>
+
+<main class="main-content">
+  <router-outlet />
+</main>

@@ -1,0 +1,27 @@
+<div class="page-header johto-header">
+  <span class="region-tag">🟡 JOHTO</span>
+  <h1>Johto Gym Leaders</h1>
+  <p>Pokémon Gold / Silver / Crystal &nbsp;·&nbsp; 8 Leaders</p>
+</div>
+
+<div class="leaders-grid">
+  @for (leader of leaders(); track leader.name) {
+    <div class="leader-card">
+      <div class="card-top">
+        <img class="badge-img" [src]="leader.badgeImg" [alt]="leader.badge" onerror="this.style.display='none'" />
+        <div class="badge-name">{{ leader.badge }}</div>
+      </div>
+      <div class="card-body">
+        <h2 class="leader-name">{{ leader.name }}</h2>
+        <p class="leader-town">{{ leader.town }}</p>
+        <span class="specialty-tag">{{ leader.specialty }}</span>
+        <div class="team-label">Pokémon Team</div>
+        <div class="team-list">
+          @for (mon of leader.team; track mon) {
+            <span class="team-chip">{{ mon }}</span>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>

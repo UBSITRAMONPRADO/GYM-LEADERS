@@ -1,86 +1,109 @@
-.home-container {
-    padding: 40px 24px;
-    color: #ffffff;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .hero {
-    text-align: center;
-    margin-bottom: 48px;
-    padding: 40px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  
-  .hero h1 {
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-    color: #ffffff;
-  }
-  
-  .hero p {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.5);
-    letter-spacing: 1px;
-  }
-  
-  .region-cards {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  
-  .region-card {
-    flex: 1;
-    min-width: 280px;
-    background: #130d0d;
-    border-radius: 8px;
-    padding: 28px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    transition: transform 0.2s ease;
-  }
-  
-  .region-card:hover {
-    transform: translateY(-2px);
-  }
-  
-  .region-card.kanto {
-    border-top: 3px solid #cd9b6a;
-  }
-  
-  .region-card.johto {
-    border-top: 3px solid #40d8a0;
-  }
-  
-  .region-card h2 {
-    font-size: 20px;
-    font-weight: 700;
-  }
-  
-  .kanto h2 {
-    color: #cd9b6a;
-  }
-  
-  .johto h2 {
-    color: #40d8a0;
-  }
-  
-  .region-card p {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.55);
-    line-height: 1.7;
-    margin: 0;
-  }
-  
-  .badge-count {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: rgba(255, 255, 255, 0.3);
-    text-transform: uppercase;
-    margin-top: 8px;
-  }
+.hero {
+  text-align: center;
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.pixel-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.2rem;
+  color: var(--accent-nav);
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.hero-sub {
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 1.25rem;
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.region-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-top: 3px solid var(--accent);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.region-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.region-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.region-emoji {
+  font-size: 2rem;
+}
+
+.region-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.region-game {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.region-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.region-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gym-count {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.region-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: opacity 0.2s;
+}
+
+.region-link:hover {
+  opacity: 0.7;
+}
