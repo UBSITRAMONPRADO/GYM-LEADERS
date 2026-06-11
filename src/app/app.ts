@@ -1,12 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { TrainerDisplay } from './trainer-display/trainer-display';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [TrainerDisplay],
+  template: `
+    <app-trainer-display></app-trainer-display>
+  `
 })
-export class App {
-  protected readonly title = signal('Pokemon-registry');
-}
+export class AppComponent {}
