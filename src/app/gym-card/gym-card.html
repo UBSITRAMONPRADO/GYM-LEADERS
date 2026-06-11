@@ -1,0 +1,45 @@
+<div class="card" [style.--type-color]="leader.color">
+  <div class="card-stripe"></div>
+
+  <div class="card-header">
+    <div>
+      <h2 class="leader-name">{{ leader.name }}</h2>
+      <p class="leader-type">{{ leader.badge }}</p>
+    </div>
+
+    <div class="badge-box">
+      <img
+        [src]="leader.badgeIcon"
+        [alt]="leader.badge"
+        class="badge-img"
+      />
+    </div>
+  </div>
+
+  <p class="card-location">{{ leader.location }}</p>
+
+  <div class="card-divider"></div>
+
+  <div class="card-body">
+    <p class="team-label">Pokémon Team</p>
+
+    <div class="team-list">
+      @for (pokemon of leader.team; track pokemon.name) {
+        <div class="poke-chip">
+          <span class="poke-name">{{ pokemon.name }}</span>
+          <span class="poke-lv">Lv. {{ pokemon.level }}</span>
+        </div>
+      }
+    </div>
+
+    <button class="motto-btn" (click)="toggleMotto()">
+      {{ showMoto ? 'Hide Motto' : 'Show Motto' }}
+    </button>
+
+    @if (showMoto && leader.moto) {
+      <div class="motto-box">
+        {{ leader.moto }}
+      </div>
+    }
+  </div>
+</div>

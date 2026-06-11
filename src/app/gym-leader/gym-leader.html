@@ -1,0 +1,78 @@
+<div
+  class="leader-card"
+  [style.border-color]="borderColor"
+  [style.box-shadow]="'0 0 10px ' + borderColor + '33'"
+>
+  <!-- Top Row: Name + Badge Icon -->
+  <div class="card-top">
+    <div class="card-info">
+      <h3 class="leader-name" [style.color]="nameColor" [style.text-shadow]="'0 0 10px ' + nameColor + '88'">
+        {{ name }}
+      </h3>
+      <p class="badge-label">{{ gymBadge }}</p>
+    </div>
+    <div class="badge-icon" [style.border-color]="borderColor">
+      <img [src]="badgeImage" [alt]="gymBadge" (error)="onImgError($event)" /> 
+    </div>
+  </div>
+
+  <!-- Location & Age -->
+  <div class="meta-row">
+    <span class="meta-item">
+      <span class="arrow" [style.color]="nameColor">↑</span> {{ location }}
+    </span>
+    <span class="meta-item age-tag">Age: {{ age }}</span>
+  </div>
+
+  <!-- Pokémon Team -->
+  <div class="pokemon-section">
+    <p class="section-label">POKÉMON TEAM</p>
+    <div class="pokemon-list">
+      @for (poke of pokemonTeam; track poke.name) {
+        <div class="pokemon-chip" [style.border-color]="borderColor + '66'">
+          <span class="poke-name">{{ poke.name }}</span>
+          <span class="poke-level">Lv. {{ poke.level }}</span>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Toggle Buttons -->
+  <div class="tab-buttons">
+    <button
+      class="tab-btn"
+      [class.active]="activeTab === 'monologue'"
+      [style.color]="activeTab === 'monologue' ? nameColor : ''"
+      [style.border-color]="activeTab === 'monologue' ? nameColor : ''"
+      (click)="toggleTab('monologue')"
+    >
+      Monologue
+    </button>
+    <button
+      class="tab-btn"
+      [class.active]="activeTab === 'description'"
+      [style.color]="activeTab === 'description' ? nameColor : ''"
+      [style.border-color]="activeTab === 'description' ? nameColor : ''"
+      (click)="toggleTab('description')"
+    >
+      Description
+    </button>
+    <button
+      class="tab-btn"
+      [class.active]="activeTab === 'motto'"
+      [style.color]="activeTab === 'motto' ? nameColor : ''"
+      [style.border-color]="activeTab === 'motto' ? nameColor : ''"
+      (click)="toggleTab('motto')"
+    >
+      Motto
+    </button>
+  </div>
+
+  <!-- Info Panel -->
+  @if (activeTab !== null) {
+    <div class="info-panel" [style.border-color]="borderColor + '44'">
+      <span class="info-tab-label" [style.color]="nameColor">{{ activeTab | uppercase }}</span>
+      <p class="info-text">{{ activeContent }}</p>
+    </div>
+  }
+</div>

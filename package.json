@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "pokemon-registry",
+=======
+  "name": "gym-leader",
+>>>>>>> d9a905c71c4d0c798d1f1c1d4d6a3dd29bb8a8ca
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

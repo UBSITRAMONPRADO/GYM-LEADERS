@@ -1,0 +1,27 @@
+<section class="region-section">
+  <div class="region-header">
+    <span class="region-tag" [style.background-color]="'#cd9b6a'" [style.color]="'#0a0a0a'">KANTO</span>
+    <h2 class="region-title" [style.color]="'#cd9b6a'" [style.text-shadow]="'0 0 20px #cd9b6a55'">
+      Kanto Region Gym Leaders
+    </h2>
+    <span class="leader-count">8 LEADERS · KANTO LEAGUE</span>
+  </div>
+
+  <div class="leaders-grid">
+    @for (leader of gymLeaders; track leader.name) {
+      <app-leader-info
+        [name]="leader.name"
+        [age]="leader.age"
+        [location]="leader.location"
+        [pokemonTeam]="leader.pokemonTeam"
+        [gymBadge]="leader.gymBadge"
+        [badgeImage]="leader.badgeImage"
+        [nameColor]="leader.nameColor"
+        [borderColor]="leader.borderColor"
+        [monologue]="leader.monologue"
+        [description]="leader.description"
+        [motto]="leader.motto"
+      />
+    }
+  </div>
+</section>

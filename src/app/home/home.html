@@ -1,0 +1,28 @@
+<section class="hero">
+  <h1 class="hero-title">Pokemon <span class="pixel-text">Gym Leaders</span></h1>
+  <p class="hero-sub">Explore gym leaders across three iconic regions. Each leader specializes in a unique type and guards a badge worthy of the Pokemon League.</p>
+</section>
+
+<section class="regions-section">
+  <h2 class="section-label">Available Regions</h2>
+  <div class="regions-grid">
+    @for (region of regions; track region.name) {
+      <div class="region-card" [style.--accent]="region.accent">
+        <div class="region-header">
+          <span class="region-emoji">{{ region.emoji }}</span>
+          <div>
+            <h3 class="region-name">{{ region.name }}</h3>
+            <span class="region-game">{{ region.game }}</span>
+          </div>
+        </div>
+        <p class="region-desc">{{ region.description }}</p>
+        <div class="region-footer">
+          <span class="gym-count">{{ region.gymCount }} Gym Leaders</span>
+          <a [routerLink]="region.route" class="region-link">
+            View Leaders →
+          </a>
+        </div>
+      </div>
+    }
+  </div>
+</section>

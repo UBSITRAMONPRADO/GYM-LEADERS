@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # PokemonRegistry
+=======
+# GymLeader
+>>>>>>> d9a905c71c4d0c798d1f1c1d4d6a3dd29bb8a8ca
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.14.
 
